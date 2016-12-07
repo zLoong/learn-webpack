@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/zLoong/learn-webpack/issues"
   },
-  "homepage": "https://github.com/zLoong/learn-webpack#readme"
+  "homepage": "https://github.com/zLoong/learn-webpack#readme",
+  "devDependencies": {
+    "webpack": "^1.14.0"
+  }
 }
