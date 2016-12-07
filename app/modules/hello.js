@@ -1,0 +1,1 @@
+module.exports="<h2>Hello Loong</h2>";
