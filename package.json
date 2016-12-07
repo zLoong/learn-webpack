@@ -1,0 +1,23 @@
+{
+  "name": "learn-webpack",
+  "version": "1.0.0",
+  "description": "step by step learn webpack config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zLoong/learn-webpack.git"
+  },
+  "keywords": [
+    "webpack",
+    "config"
+  ],
+  "author": "loong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zLoong/learn-webpack/issues"
+  },
+  "homepage": "https://github.com/zLoong/learn-webpack#readme"
+}
