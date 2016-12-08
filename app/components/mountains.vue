@@ -5,9 +5,10 @@
 </template>
 <style>
     ul {
-        width: 800px;
+        width: 100%;
         margin: 0 auto;
         text-align: center;
+        list-style: none;
     }
     
     li {
@@ -25,7 +26,7 @@
 export default {
     data () {
         return {
-        list: ["恒山", "衡山", "华山", "泰山", "嵩山"]
+        list: ["恒山", "衡山", "华山", "泰山", "嵩山高"]
         }
     }
 }
