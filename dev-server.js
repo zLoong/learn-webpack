@@ -2,6 +2,11 @@ var express = require("express");
 var app = express();
 var port = process.env.port || 3000;
 
+//动态输出多个html
+var path = require("path");
+var fs=require("fs");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
+
 /*
 *引入webpack及其配置config
 */
@@ -14,7 +19,19 @@ Object.keys(webpackConfig.entry).forEach(function (name, i) {
     var extras = [devClient];
     webpackConfig.entry[name] = extras.concat(webpackConfig.entry[name]);
 });
-console.log(webpackConfig.entry);
+
+//动态输出多个html
+(function pages() {   
+    var htmlPath=fs.readdirSync(path.resolve(__dirname,"./app/views/"));
+    console.log(33);
+    var matchs = [], files = {};  
+    htmlPath.forEach(function (item) {      
+        matchs=item.match(/(.+)\.html$/);    
+        var temp={filename:matchs[0],template:path.resolve(__dirname,'./app/views/'+matchs[0]),inject:false};      
+        webpackConfig.plugins.push(new HtmlWebpackPlugin(temp));
+        console.log(11);   
+    });
+}());
 
 //调用配置,生成 compiler instance(编译实例)
 var compiler = webpack(webpackConfig);
